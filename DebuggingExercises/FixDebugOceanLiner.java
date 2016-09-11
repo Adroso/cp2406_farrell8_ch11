@@ -2,7 +2,7 @@ public class FixDebugOceanLiner extends FixDebugBoat
 {
    public FixDebugOceanLiner()
    {
-      Debug("ocean liner ");
+      super("ocean liner ");
       setPassengers();
       setPower();
    }
@@ -10,7 +10,7 @@ public class FixDebugOceanLiner extends FixDebugBoat
    {
       super.passengers = 2400;
    }
-   public void power()
+   public void setPower()
    {
       super.power = "four engines";
    }

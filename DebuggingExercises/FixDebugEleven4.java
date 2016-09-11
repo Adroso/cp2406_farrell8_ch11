@@ -17,12 +17,12 @@ public class FixDebugEleven4
      {
         boatType = getBoat();
         if(boatType =='r')
- 	     boatArray[x] = DebugRowboat();
+ 	     boatArray[x] = new FixDebugRowboat();
         else
-          boatArray[x] = DebugOceanLiner();
+          boatArray[x] = new FixDebugOceanLiner();
      }
    }
-   public static void getBoat()
+   public static char getBoat()
    {
       String boatType;
       boatType = JOptionPane.showInputDialog(null, 
@@ -31,8 +31,9 @@ public class FixDebugEleven4
    }
    public static void displayArray()
    {
-      for(int x = 0; x < boatArray.length; --x)
-      JOptionPane.showMessageDialog(null, "Boat #" + (x  + 1) +
-         boatArray[x].toString);
+      for(int x = 0; x < boatArray.length; ++x) {
+         JOptionPane.showMessageDialog(null, "Boat #" + (x  + 1) +
+                 boatArray[x].toString());
+      }
    }
 }
